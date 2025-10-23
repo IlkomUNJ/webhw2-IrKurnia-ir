@@ -1,0 +1,62 @@
+@layout.app() 
+@set('title', 'Adonis Shop')
+
+    @slot('main')
+    <main class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-serif text-gray-900 mb-12 text-center">Our Signature Scents</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Elysian Bloom -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="relative h-64 sm:h-72 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="{{asset('resources/images/elysian-bloom.jpg')}}" alt="Elysian Bloom Perfume">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-serif text-gray-800 mb-3">Elysian Bloom</h3>
+                    <p class="text-gray-600 mb-4">A delicate harmony of peony, white musk, and a hint of fresh pear. This scent captures the essence of a secret garden in spring.</p>
+                    <button id="addBtn1" class="bg-gray-800 text-white px-8 py-2 rounded-full hover:bg-gray-700 transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Midnight Oud -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="relative h-64 sm:h-72 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="{{asset('resources/images/midnight-oud.jpg')}}" alt="Midnight Oud Perfume">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-serif text-gray-800 mb-3">Midnight Oud</h3>
+                    <p class="text-gray-600 mb-4">A rich and mysterious blend of rare oud wood, saffron, and rose. A deep, warm, and unforgettable fragrance for the evening.</p>
+                    <button id="addBtn2" class="bg-gray-800 text-white px-8 py-2 rounded-full hover:bg-gray-700 transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Solstice Citrus -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="relative h-64 sm:h-72 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="{{asset('resources/images/solstice-citrus.jpg')}}" alt="Solstice Citrus Perfume">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-serif text-gray-800 mb-3">Solstice Citrus</h3>
+                    <p class="text-gray-600 mb-4">A vibrant burst of Sicilian lemon, bergamot, and neroli. Crisp, refreshing, and full of life, like a perfect summer's day.</p>
+                    <button id="addBtn3" class="bg-gray-800 text-white px-8 py-2 rounded-full hover:bg-gray-700 transition duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function() {
+            $('#addBtn1, #addBtn2, #addBtn3, #addBtn4').click(function() {
+                //alert('Product added to cart!');
+                console.log('Add to Cart button clicked');
+                 $('#cartCounter').text( parseInt($('#cartCounter').text()) + 1);
+            });
+        });
+    </script>
+    @endslot
+@end

@@ -1,0 +1,159 @@
+@layout('components/layout/app')
+
+@set('title', 'Shopping Cart')
+
+@slot('main')
+<main class="container mx-auto px-4 py-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Cart Items Section -->
+        <div class="w-full lg:w-2/3">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h1 class="text-2xl font-serif">Keranjang</h1>
+                    <div class="flex items-center">
+                        <input type="checkbox" class="w-4 h-4 text-gray-800 border-gray-300 rounded">
+                        <span class="ml-2 text-sm text-gray-600">Pilih Semua (3)</span>
+                    </div>
+                </div>
+
+                <!-- Cart Items -->
+                <div class="space-y-6">
+                    <!-- Item 1 -->
+                    <div class="flex items-start space-x-4 pb-6 border-b">
+                        <input type="checkbox" class="w-4 h-4 mt-2 text-gray-800 border-gray-300 rounded">
+                        <div class="w-24 h-24">
+                            <img src="{{asset('resources/images/elysian-bloom.jpg')}}" alt="Elysian Bloom" class="w-full h-full object-cover rounded">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-medium mb-1">Elysian Bloom</h3>
+                            <p class="text-gray-500 text-sm mb-4">50ml Eau de Parfum</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-lg font-semibold">Rp850.000</div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="w-8 h-8 flex items-center justify-center border rounded-full">-</button>
+                                    <input type="number" value="1" class="w-16 text-center border-gray-200 rounded">
+                                    <button class="w-8 h-8 flex items-center justify-center border rounded-full">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-start space-x-4 pb-6 border-b">
+                        <input type="checkbox" class="w-4 h-4 mt-2 text-gray-800 border-gray-300 rounded">
+                        <div class="w-24 h-24">
+                            <img src="{{asset('resources/images/midnight-oud.jpg')}}" alt="Midnight Oud" class="w-full h-full object-cover rounded">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-medium mb-1">Midnight Oud</h3>
+                            <p class="text-gray-500 text-sm mb-4">50ml Eau de Parfum</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-lg font-semibold">Rp950.000</div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="w-8 h-8 flex items-center justify-center border rounded-full">-</button>
+                                    <input type="number" value="1" class="w-16 text-center border-gray-200 rounded">
+                                    <button class="w-8 h-8 flex items-center justify-center border rounded-full">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex items-start space-x-4">
+                        <input type="checkbox" class="w-4 h-4 mt-2 text-gray-800 border-gray-300 rounded">
+                        <div class="w-24 h-24">
+                            <img src="{{asset('resources/images/solstice-citrus.jpg')}}" alt="Solstice Citrus" class="w-full h-full object-cover rounded">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-lg font-medium mb-1">Solstice Citrus</h3>
+                            <p class="text-gray-500 text-sm mb-4">50ml Eau de Parfum</p>
+                            <div class="flex items-center justify-between">
+                                <div class="text-lg font-semibold">Rp750.000</div>
+                                <div class="flex items-center space-x-3">
+                                    <button class="w-8 h-8 flex items-center justify-center border rounded-full">-</button>
+                                    <input type="number" value="1" class="w-16 text-center border-gray-200 rounded">
+                                    <button class="w-8 h-8 flex items-center justify-center border rounded-full">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Summary Section -->
+        <div class="w-full lg:w-1/3">
+            <div class="bg-white rounded-lg shadow p-6 sticky top-24">
+                <h2 class="text-lg font-serif mb-4">Ringkasan belanja</h2>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">Total Harga (3 barang)</span>
+                        <span>Rp2.550.000</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">Total Diskon</span>
+                        <span class="text-green-600">-Rp255.000</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-between font-semibold mb-6 pt-4 border-t">
+                    <span>Total</span>
+                    <span>Rp2.295.000</span>
+                </div>
+
+                <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-medium hover:bg-gray-700 transition duration-300">
+                    Beli (3)
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all checkboxes
+    const selectAllCheckbox = document.querySelector('input[type="checkbox"]');
+    const itemCheckboxes = document.querySelectorAll('.space-y-6 input[type="checkbox"]');
+    
+    // Handle "Select All" functionality
+    selectAllCheckbox.addEventListener('change', function() {
+        itemCheckboxes.forEach(checkbox => {
+            checkbox.checked = this.checked;
+        });
+    });
+
+    // Quantity buttons functionality
+    document.querySelectorAll('.flex.items-center.space-x-3').forEach(container => {
+        const minusBtn = container.querySelector('button:first-child');
+        const plusBtn = container.querySelector('button:last-child');
+        const input = container.querySelector('input');
+
+        minusBtn.addEventListener('click', () => {
+            if (input.value > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            input.value = parseInt(input.value) + 1;
+        });
+    });
+});
+</script>
+@end

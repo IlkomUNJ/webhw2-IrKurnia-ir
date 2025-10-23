@@ -1,0 +1,119 @@
+@component('components/layout/app')
+  @slot('title')
+    About Us
+  @end
+
+  @slot('main')
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+        <h1 class="text-4xl font-serif mb-4">Our Story</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+            Welcome to our luxury fragrance boutique, where artistry meets olfactory excellence. 
+            Since our establishment, we've been dedicated to bringing the finest perfumes to our discerning customers.
+        </p>
+    </div>
+
+    <!-- Values Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-all duration-300">
+            <div class="mb-4 h-16 flex items-center justify-center">
+                <i class="fas fa-star text-4xl text-gray-800"></i>
+            </div>
+            <h3 class="text-xl font-serif mb-3">Quality</h3>
+            <p class="text-gray-600">
+                We source only the finest ingredients and partner with renowned perfumers to create exceptional fragrances.
+            </p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-all duration-300">
+            <div class="mb-4 h-16 flex items-center justify-center">
+                <i class="fas fa-heart text-4xl text-gray-800"></i>
+            </div>
+            <h3 class="text-xl font-serif mb-3">Passion</h3>
+            <p class="text-gray-600">
+                Our love for perfumery drives us to explore and create unique scent experiences.
+            </p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-all duration-300">
+            <div class="mb-4 h-16 flex items-center justify-center">
+                <i class="fas fa-leaf text-4xl text-gray-800"></i>
+            </div>
+            <h3 class="text-xl font-serif mb-3">Sustainability</h3>
+            <p class="text-gray-600">
+                We're committed to sustainable practices in our production and packaging.
+            </p>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="mb-16">
+        <h2 class="text-3xl font-serif text-center mb-12">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <img src="{{asset('resources/images/team-1.jpg')}}" alt="Team Member" 
+                     class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-medium mb-2">Sarah Johnson</h3>
+                <p class="text-gray-600 mb-2">Founder & Creative Director</p>
+                <p class="text-sm text-gray-500">
+                    With 15 years of experience in luxury perfumery
+                </p>
+            </div>
+            <div class="text-center">
+                <img src="{{asset('resources/images/team-2.jpg')}}" alt="Team Member" 
+                     class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-medium mb-2">David Chen</h3>
+                <p class="text-gray-600 mb-2">Master Perfumer</p>
+                <p class="text-sm text-gray-500">
+                    Graduate of ISIPCA, Paris
+                </p>
+            </div>
+            <div class="text-center">
+                <img src="{{asset('resources/images/team-3.jpg')}}" alt="Team Member" 
+                     class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-medium mb-2">Maria Garcia</h3>
+                <p class="text-gray-600 mb-2">Quality Assurance Manager</p>
+                <p class="text-sm text-gray-500">
+                    Ensuring the highest standards in every bottle
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Process Section -->
+    <div class="mb-16">
+        <h2 class="text-3xl font-serif text-center mb-12">Our Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-xl font-serif mb-4">Ingredient Selection</h3>
+                <p class="text-gray-600 mb-4">
+                    We carefully select each ingredient, sourcing from sustainable suppliers worldwide. 
+                    Our ingredients meet the highest quality standards and are ethically sourced.
+                </p>
+                <img src="{{asset('resources/images/ingredients.jpg')}}" alt="Ingredient Selection" 
+                     class="w-full h-64 object-cover rounded-lg">
+            </div>
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-xl font-serif mb-4">Crafting Process</h3>
+                <p class="text-gray-600 mb-4">
+                    Each fragrance is carefully crafted in small batches to ensure quality control. 
+                    Our master perfumers blend traditional techniques with modern innovation.
+                </p>
+                <img src="{{asset('resources/images/crafting.jpg')}}" alt="Crafting Process" 
+                     class="w-full h-64 object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="text-center bg-gray-50 p-12 rounded-lg">
+        <h2 class="text-3xl font-serif mb-4">Get in Touch</h2>
+        <p class="text-gray-600 mb-6">
+            We'd love to hear from you. Whether you have questions about our products or are interested in partnerships,
+            our team is here to help.
+        </p>
+        <a href="/contact" class="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition duration-300">
+            Contact Us
+        </a>
+    </div>
+</main>
+  @end
+@end

@@ -1,0 +1,36 @@
+@component('components/layout/app')
+  @slot('title')
+    Search
+  @end
+
+  @slot('main')
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">
+      Search Results for: <span class="text-indigo-600">"{{ query }}"</span>
+    </h1>
+
+    @if(products && products.length)
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      @each(product in products)
+        <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+          <a href="/products/{{ product.slug || product.id }}">
+            <img src="{{ product.image || 'https://via.placeholder.com/300' }}" alt="{{ product.name }}" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 truncate">{{ product.name }}</h3>
+              <p class="text-gray-600 mt-2">Rp{{ product.price.toString() }}</p>
+            </div>
+          </a>
+        </div>
+      @end
+    </div>
+  @else
+    <div class="text-center py-12">
+      <p class="text-xl text-gray-500">No products found matching your search.</p>
+      <a href="/" class="mt-4 inline-block bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-700 transition duration-300">
+        Back to Home
+      </a>
+    </div>
+    @end
+  </div>
+  @end
+@end
